@@ -5,27 +5,27 @@
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Se agregaron meta tags charset="UTF-8" y viewport necesarios para que Bootstrap responsive funcione correctamente -->
+	<!-- Por recomendacion de una IA, se agregaron meta tags charset="UTF-8" y viewport necesarios para que Bootstrap responsive funcione correctamente -->
 	
-    <title id="titulo3">Modiulo 2 Leccion4-Ejercicio</title>
+    <title id="titulo3">Modiulo 2 Leccion5 - Ejercicio1-2-3</title>
 	<!-- -->
 	
     <link rel="stylesheet" href="./assets/css/styles.css">
 	<!-- -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-	<!-- bootstrap@5.3.8` en <head> -->
+	<!-- se agrego linea CND de bootstrap@5.3.8` en <head> -->
 </head>
 
 <body class="bg-info bg-opacity-10">
-	<!-- NavBar -->
+	<!-- Inicio NavBar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
-	<!-- 	- navbar-expand-lg: el menú se muestra horizontal en pantallas grandes, y se colapsa con hamburguesa en móviles
-		- navbar-light bg-light: fondo claro con texto oscuro
-		- ms-auto: empuja los enlaces a la derecha
-		- Se usaron enlaces ficticios (`#`) -->
+	<!-- 	- navbar-expand-lg: el menu se muestra horizontal en pantallas grandes, y se colapsa en un tipo hamburguesa en telefonos moviles
+			- navbar-light bg-light: fondo claro con texto oscuro
+			- ms-auto: empuja los enlaces a la derecha
+			- Se usaron enlaces ficticios (`#`) -->
 		
         <div class="container">
-            <a class="navbar-brand" href="#">Modulo2 Lección 4</a>
+            <a class="navbar-brand" href="#">Modulo2 Lección 5</a>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
@@ -39,25 +39,26 @@
     <div class="container mt-3">
 	
         <div class="bg-light p-5 rounded shadow-sm mb-4">
-            <h1 class="display-4">Bienvenido a Modulo2 Lección 4</h1>
+            <h1 class="display-4">Bienvenido a Modulo2 Lección 5</h1>
             <p class="lead">Sección destacada tipo "HERO". En este espacio se puede presentar un contenido principal de una empresa por ejemplo.</p>
         </div>
 	<!-- fin de HERO -->
 
-        <h1 id="h1" class="text-danger">Modulo2 Lección 4</h1>
+        <h1 id="h1" class="text-danger">Modulo2 Lección 5</h1>
 		<!-- uso class "text-danger" para igualar color Rojo (color: red;) -->
-        <header id="header">Modulo2 Lección 4 Ejercicio</header>
+        <header id="header">Modulo2 Lección 5 Ejercicio</header>
         <p>Mi nombre es Enrique Mora</p>
         <section id="seccion1" class="normal"><p>Seccion Uno</p></section>
         <article id="Noticia" class="noticia"><p>Articulo 1</p></article>
 
         <footer>
-		<!-- Footer -->
+		<!-- inicio de Footer -->
             <h2 id="h2" class="text-danger">Elemento de contacto</h2>
             <h3 id="h3" class="text-danger">Contacto</h3>
             <p>Telefono: 123-456-7890</p>
-        
-
+        <!-- Se agrega parrafo Lorem ipsum solo para que aparezca "Ir Arriba" al final de la pagina en pantalla maximizada -->
+			<p>Lorem ipsum dolor sit amet consectetur adipiscing elit ultricies, dui donec sem mattis sollicitudin aenean condimentum, cum dapibus accumsan ad neque felis cursus. Turpis habitasse tortor parturient egestas mauris congue arcu luctus risus erat, ullamcorper at rutrum ante vitae pulvinar convallis cubilia nunc, ultricies ligula justo hendrerit nostra placerat purus porttitor interdum. Luctus mauris massa augue feugiat class orci eros, natoque ornare est torquent leo felis, morbi porta nostra ad vel pretium.</p>
+			<p>Imperdiet suscipit sagittis torquent quis leo netus est phasellus enim himenaeos, pellentesque bibendum commodo integer dui velit quisque pulvinar et urna, turpis curabitur proin eu taciti suspendisse laoreet nulla nascetur. Malesuada ultricies cras vulputate fames integer duis hac imperdiet cursus dapibus, morbi quam vitae praesent volutpat magna tempus tincidunt placerat varius, aliquam ac donec gravida id urna ullamcorper ut scelerisque. Ullamcorper fermentum platea purus scelerisque cras dapibus eros, suscipit donec diam justo malesuada egestas curae, posuere odio vel arcu hac ultricies.</p>
         <div class="text-center mt-3 mb-3">
 		<!-- 	- text-center de Bootstrap reemplaza a .centrar { text-align: center }
 				- d-block mx-auto reemplaza margin: auto (Bootstrap requiere d-block para que mx-auto funcione en imágenes)
@@ -67,15 +68,20 @@
             <img src="./assets/img/im.jpg" alt="Atardecer" class="imagen d-block mx-auto">
         </div>
 		<button class="btn btn-primary mb-3" onclick="document.getElementById('unaAlerta').classList.remove('d-none')">Revisar Sitio</button>
-		<!-- Boton -->
+		<!-- Inicio de boton -->
         <div id="unaAlerta" class="alert alert-success d-none" role="alert">
 		
             Sitio web funcionando correctamente.
+			<button type="button" class="btn-close" onclick="ocultarAlerta()"></button>
         </div>
+		
 		</footer>
     </div>
-
+<!-- se agrega referencia a JS-->
+<script src="./assets/js/script.js"></script>
+<!-- Boton "Ir Arriba"-->
+<button id="btnArriba" class="btn btn-dark rounded-circle position-fixed" onclick="irArriba()" style="bottom: 50px; right: 50px; width: 70px; height: 70px; display: none;">Ir Arriba</button>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<!-- bootstrap.bundle.min.js al final del <body> -->
+<!-- se agrego bootstrap.bundle.min.js al final del <body> -->
 </body>
 </html>
