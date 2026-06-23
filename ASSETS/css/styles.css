@@ -1,0 +1,22 @@
+body {
+    background-color: lightblue;
+}
+#h1 {
+   color: red;
+}
+#h2 {
+    color: red;
+}
+
+#h3 {
+    color: red;
+}
+
+.centrar {
+    text-align: center;
+}
+.imagen {
+    width: 400px;
+    height: 300px;
+    margin: auto;
+}
