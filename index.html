@@ -1,23 +1,81 @@
-<html>
+<!DOCTYPE html>
+<!-- Se agregó <!DOCTYPE html> -->
+<html lang="es">
+<!-- Se agregó lang="es" al <html> -->
 <head>
-    <title id="titulo3">Leccion3-Ejercicio1</title>
-    <link rel="stylesheet" href="./ASSETS/css/styles.css">
-
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Se agregaron meta tags charset="UTF-8" y viewport necesarios para que Bootstrap responsive funcione correctamente -->
+	
+    <title id="titulo3">Modiulo 2 Leccion4-Ejercicio</title>
+	<!-- -->
+	
+    <link rel="stylesheet" href="./assets/css/styles.css">
+	<!-- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<!-- bootstrap@5.3.8` en <head> -->
 </head>
-<body>
-    <h1 id="h1">Leccion 3 e1</h1>
-    <header id="header">Leccion 3 ejercicio 1</header>
-    <p>Mi nombre es Enrique Mora</p>
-    <section id="seccion1" class="normal"><p>Seccion Uno</p></section>
-    
-    <article id="Noticia" class="noticia"><p>Articulo 1</p></article>
-    <footer>
-        <h2 id="h2">Elemento de contacto</h2>
-        <h3 id="h3">Contacto</h3>
-        <p>Telefono: 123-456-7890</p></footer>
-        <div class="centrar">
-            <img src="./ASSETS/img/im.jpg" alt="Atardecer" class="imagen">
+
+<body class="bg-info bg-opacity-10">
+	<!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+	<!-- 	- navbar-expand-lg: el menú se muestra horizontal en pantallas grandes, y se colapsa con hamburguesa en móviles
+		- navbar-light bg-light: fondo claro con texto oscuro
+		- ms-auto: empuja los enlaces a la derecha
+		- Se usaron enlaces ficticios (`#`) -->
+		
+        <div class="container">
+            <a class="navbar-brand" href="#">Modulo2 Lección 4</a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+            </ul>
         </div>
-            
+    </nav>
+	<!-- 	- Bootstrap 5 eliminó la clase .jumbotron que existía en BS3/BS4 -->
+		
+	<!-- inicio HERO -->
+	
+    <div class="container mt-3">
+	
+        <div class="bg-light p-5 rounded shadow-sm mb-4">
+            <h1 class="display-4">Bienvenido a Modulo2 Lección 4</h1>
+            <p class="lead">Sección destacada tipo "HERO". En este espacio se puede presentar un contenido principal de una empresa por ejemplo.</p>
+        </div>
+	<!-- fin de HERO -->
+
+        <h1 id="h1" class="text-danger">Modulo2 Lección 4</h1>
+		<!-- uso class "text-danger" para igualar color Rojo (color: red;) -->
+        <header id="header">Modulo2 Lección 4 Ejercicio</header>
+        <p>Mi nombre es Enrique Mora</p>
+        <section id="seccion1" class="normal"><p>Seccion Uno</p></section>
+        <article id="Noticia" class="noticia"><p>Articulo 1</p></article>
+
+        <footer>
+		<!-- Footer -->
+            <h2 id="h2" class="text-danger">Elemento de contacto</h2>
+            <h3 id="h3" class="text-danger">Contacto</h3>
+            <p>Telefono: 123-456-7890</p>
+        
+
+        <div class="text-center mt-3 mb-3">
+		<!-- 	- text-center de Bootstrap reemplaza a .centrar { text-align: center }
+				- d-block mx-auto reemplaza margin: auto (Bootstrap requiere d-block para que mx-auto funcione en imágenes)
+				- Se mantuvieron width y height fijos en CSS porque Bootstrap no tiene clases para dimensiones exactas en píxeles
+				- Se agregó object-fit: cover para que la imagen no se distorsione si su proporción original no es 4:3
+		 -->
+            <img src="./assets/img/im.jpg" alt="Atardecer" class="imagen d-block mx-auto">
+        </div>
+		<button class="btn btn-primary mb-3" onclick="document.getElementById('unaAlerta').classList.remove('d-none')">Revisar Sitio</button>
+		<!-- Boton -->
+        <div id="unaAlerta" class="alert alert-success d-none" role="alert">
+		
+            Sitio web funcionando correctamente.
+        </div>
+		</footer>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- bootstrap.bundle.min.js al final del <body> -->
 </body>
 </html>
